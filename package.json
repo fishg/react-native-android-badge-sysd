@@ -1,0 +1,16 @@
+{
+  "name": "react-native-android-badge-sysd",
+  "description": "A react native wrapper for leolin310148/ShortcutBadger.",
+  "version": "0.0.1",
+  "main": "index.android.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NaturalDragon/react-native-android-badge-sysd.git"
+  },
+  "author": "Jhen <developer@jhen.me>",
+  "license": "MIT",
+  "homepage": "https://github.com/NaturalDragon/react-native-android-badge-sysd.git#readme",
+  "peerDependencies": {
+    "react-native": "*"
+  }
+}
