@@ -10,7 +10,6 @@ import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 
 import me.leolin.shortcutbadger.ShortcutBadger;
-import com.alibaba.fastjson.JSON;
 public class BadgeModule extends ReactContextBaseJavaModule {
 
   private Context context;
