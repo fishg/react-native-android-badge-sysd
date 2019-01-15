@@ -14,7 +14,6 @@ import com.alibaba.fastjson.JSON;
 public class BadgeModule extends ReactContextBaseJavaModule {
 
   private Context context;
-  public static final String NOTIFY_LISTENER_HANDLER = "com.stan.NOTIFICATION_LISTENER_EXAMPLE";
   public BadgeModule(ReactApplicationContext reactContext) {
     super(reactContext);
 
@@ -28,15 +27,14 @@ public class BadgeModule extends ReactContextBaseJavaModule {
 
   @ReactMethod
   public void setBadge(int number) {
-   
-
-    Intent i = new  Intent(NOTIFY_LISTENER_HANDLER);
-IconIndicators indicators = new IconIndicators(context.getPackageName(),number,true);
-    String message = JSON.toJSONString(indicators);
-    //Log.e(TAG,"notify message: "+message);
-    i.putExtra("notification_event",message);
-    context.sendBroadcast(i);
-
-   // ShortcutBadger.applyCount(getReactApplicationContext(), number);
+    try {
+      if (number > 0) {
+        ShortcutBadger.applyCount(context, number);
+      } else {
+        ShortcutBadger.removeCount(context);
+      }
+    }catch (Throwable e){
+      e.printStackTrace();
+    }
   }
 }
