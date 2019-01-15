@@ -34,6 +34,6 @@ repositories {
 
 dependencies {
     compile 'com.facebook.react:react-native:+'
-    compile 'me.leolin:ShortcutBadger:1.1.17@aar'
+    compile 'me.leolin:ShortcutBadger:1.1.22@aar'
      compile fileTree( dir: "libs", includes: ['*.jar'] )
 }
